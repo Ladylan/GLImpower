@@ -126,7 +126,10 @@ public func judgeIsDenied(impowerType: ImpowerType) -> Bool{
  * @param agreed - 授权状态为“同意”时回调
  * @param agreed - 授权状态为“拒绝”时回调
  **/
-public func getImpower(_ type: ImpowerType, agreed agreedAction: @escaping GLImpowerAction, rejected rejectedAction: @escaping GLImpowerAction){
+public func getImpower(_ type: ImpowerType,
+                       agreed agreedAction: @escaping GLImpowerAction,
+                       rejected rejectedAction: @escaping GLImpowerAction){
+    
     if judgeIsNotDetermined(impowerType: type) {
         //未授权过，弹出提示框询问是否进行下一步授权操作
         showImpowerAlert(type: type, agreed: agreedAction, rejected: rejectedAction)
@@ -139,7 +142,9 @@ public func getImpower(_ type: ImpowerType, agreed agreedAction: @escaping GLImp
 /**
  * 返回授权状态
  **/
-public func impowerState(type: ImpowerType, agreed: @escaping GLImpowerAction, rejected: @escaping GLImpowerAction){
+public func impowerState(type: ImpowerType,
+                         agreed: @escaping GLImpowerAction,
+                         rejected: @escaping GLImpowerAction){
     switch type {
     case .camera:
         getCameraImpower(agreed: agreed, rejected: rejected)

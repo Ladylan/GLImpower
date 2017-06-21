@@ -111,11 +111,15 @@ public func showDidAgreeImpowerAlertView(impowerType: ImpowerType){
 /**
  * 询问是否进行下一步授权提示弹框
  **/
-public func showImpowerAlert(type: ImpowerType, agreed: @escaping GLImpowerAction, rejected: @escaping GLImpowerAction){
+public func showImpowerAlert(type: ImpowerType,
+                             agreed: @escaping GLImpowerAction,
+                             rejected: @escaping GLImpowerAction){
+    
     showAlertView(title: askImpowerAlertTitle(impowerType: type), cancelStr: "暂不", confirmStr: "确定", cancelAction: {
     }, confirmAction: {
         impowerState(type: type, agreed: agreed, rejected: rejected)
     })
+    
 }
 
 /**
@@ -126,7 +130,11 @@ public func showImpowerAlert(type: ImpowerType, agreed: @escaping GLImpowerActio
  * @param cancelAction - 确认按钮点击回调
  * @param cancelAction - 取消按钮点击回调
  **/
-private func showAlertView(title: String, cancelStr: String, confirmStr: String, cancelAction: @escaping GLAlertAction, confirmAction: @escaping GLAlertAction){
+private func showAlertView(title: String,
+                           cancelStr: String,
+                           confirmStr: String,
+                           cancelAction: @escaping GLAlertAction,
+                           confirmAction: @escaping GLAlertAction){
     
     let alertController = UIAlertController(title: title,
                                             message: "", preferredStyle: .alert)

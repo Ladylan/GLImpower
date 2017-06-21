@@ -56,7 +56,8 @@ class GLPhotoHelper: UIImagePickerController {
      * @param type - 获取图片途径
      * @parm block - 选择图片回调
      **/
-    private func creatWithScourceType(type: UIImagePickerControllerSourceType, block:@escaping selectedBlock)  {
+    private func creatWithScourceType(type: UIImagePickerControllerSourceType,
+                                      block:@escaping selectedBlock)  {
         photoHelper.helper = GLPhotoDelegate()
         photoHelper.delegate = photoHelper.helper
         photoHelper.sourceType = type
