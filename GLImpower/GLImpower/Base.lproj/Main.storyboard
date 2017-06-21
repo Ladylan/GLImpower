@@ -27,6 +27,7 @@
                                     <constraint firstAttribute="width" constant="94" id="1TQ-Il-EnZ"/>
                                     <constraint firstAttribute="height" constant="30" id="jur-On-qoF"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="选取图片">
                                     <color key="titleColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -40,6 +41,7 @@
                                     <constraint firstAttribute="height" constant="30" id="fJL-8H-j9o"/>
                                     <constraint firstAttribute="width" constant="94" id="pKw-sm-Nfl"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="麦克风授权">
                                     <color key="titleColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -53,6 +55,7 @@
                                     <constraint firstAttribute="height" constant="30" id="gdY-R3-vO3"/>
                                     <constraint firstAttribute="width" constant="94" id="xy5-U7-GLe"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="定位授权">
                                     <color key="titleColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -66,6 +69,7 @@
                                     <constraint firstAttribute="height" constant="30" id="ZHU-p0-cXS"/>
                                     <constraint firstAttribute="width" constant="94" id="oFz-ja-801"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="日历授权">
                                     <color key="titleColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -79,6 +83,7 @@
                                     <constraint firstAttribute="height" constant="30" id="b5c-J1-j5c"/>
                                     <constraint firstAttribute="width" constant="94" id="wkQ-PM-7yq"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="通知授权">
                                     <color key="titleColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -99,6 +104,7 @@
                                     <constraint firstAttribute="width" constant="94" id="SfN-iT-gfx"/>
                                     <constraint firstAttribute="height" constant="30" id="TDr-q6-DmT"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="通讯录授权">
                                     <color key="titleColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
