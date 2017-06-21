@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F812F59B1EF7750A0031B311 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F812F59A1EF7750A0031B311 /* AppDelegate.swift */; };
+		F812F59D1EF7750A0031B311 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F812F59C1EF7750A0031B311 /* ViewController.swift */; };
+		F812F5A01EF7750A0031B311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F812F59E1EF7750A0031B311 /* Main.storyboard */; };
+		F812F5A21EF7750A0031B311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F812F5A11EF7750A0031B311 /* Assets.xcassets */; };
+		F812F5A51EF7750A0031B311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F812F5A31EF7750A0031B311 /* LaunchScreen.storyboard */; };
+		F812F5B01EF7750A0031B311 /* GLImpowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F812F5AF1EF7750A0031B311 /* GLImpowerTests.swift */; };
+		F812F5BB1EF7750A0031B311 /* GLImpowerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F812F5BA1EF7750A0031B311 /* GLImpowerUITests.swift */; };
+		F812F5CA1EF776490031B311 /* GLImpower.swift in Sources */ = {isa = PBXBuildFile; fileRef = F812F5C91EF776490031B311 /* GLImpower.swift */; };
+		F812F5CE1EF7D1CA0031B311 /* GLImpowerAlertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F812F5CD1EF7D1CA0031B311 /* GLImpowerAlertUtil.swift */; };
+		F8B635EA1EFA06DF00DA3D3C /* GLPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B635E91EFA06DF00DA3D3C /* GLPhotoHelper.swift */; };
+		F8B635EE1EFA086C00DA3D3C /* user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B635EC1EFA086C00DA3D3C /* user@2x.png */; };
+		F8B635EF1EFA086C00DA3D3C /* user@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B635ED1EFA086C00DA3D3C /* user@3x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F812F5AC1EF7750A0031B311 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F812F58F1EF7750A0031B311 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F812F5961EF7750A0031B311;
+			remoteInfo = GLImpower;
+		};
+		F812F5B71EF7750A0031B311 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F812F58F1EF7750A0031B311 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F812F5961EF7750A0031B311;
+			remoteInfo = GLImpower;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F812F5971EF7750A0031B311 /* GLImpower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLImpower.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F812F59A1EF7750A0031B311 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F812F59C1EF7750A0031B311 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F812F59F1EF7750A0031B311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F812F5A11EF7750A0031B311 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F812F5A41EF7750A0031B311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F812F5A61EF7750A0031B311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F812F5AB1EF7750A0031B311 /* GLImpowerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GLImpowerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F812F5AF1EF7750A0031B311 /* GLImpowerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLImpowerTests.swift; sourceTree = "<group>"; };
+		F812F5B11EF7750A0031B311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F812F5B61EF7750A0031B311 /* GLImpowerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GLImpowerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F812F5BA1EF7750A0031B311 /* GLImpowerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLImpowerUITests.swift; sourceTree = "<group>"; };
+		F812F5BC1EF7750A0031B311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F812F5C91EF776490031B311 /* GLImpower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLImpower.swift; sourceTree = "<group>"; };
+		F812F5CD1EF7D1CA0031B311 /* GLImpowerAlertUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLImpowerAlertUtil.swift; sourceTree = "<group>"; };
+		F8B635E91EFA06DF00DA3D3C /* GLPhotoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLPhotoHelper.swift; sourceTree = "<group>"; };
+		F8B635EC1EFA086C00DA3D3C /* user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user@2x.png"; sourceTree = "<group>"; };
+		F8B635ED1EFA086C00DA3D3C /* user@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user@3x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F812F5941EF7750A0031B311 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F812F5A81EF7750A0031B311 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F812F5B31EF7750A0031B311 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F812F58E1EF7750A0031B311 = {
+			isa = PBXGroup;
+			children = (
+				F812F5991EF7750A0031B311 /* GLImpower */,
+				F812F5AE1EF7750A0031B311 /* GLImpowerTests */,
+				F812F5B91EF7750A0031B311 /* GLImpowerUITests */,
+				F812F5981EF7750A0031B311 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F812F5981EF7750A0031B311 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F812F5971EF7750A0031B311 /* GLImpower.app */,
+				F812F5AB1EF7750A0031B311 /* GLImpowerTests.xctest */,
+				F812F5B61EF7750A0031B311 /* GLImpowerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F812F5991EF7750A0031B311 /* GLImpower */ = {
+			isa = PBXGroup;
+			children = (
+				F8B635EB1EFA086C00DA3D3C /* Resource */,
+				F812F5C81EF7762F0031B311 /* Impower */,
+				F812F59A1EF7750A0031B311 /* AppDelegate.swift */,
+				F812F59C1EF7750A0031B311 /* ViewController.swift */,
+				F812F59E1EF7750A0031B311 /* Main.storyboard */,
+				F812F5A11EF7750A0031B311 /* Assets.xcassets */,
+				F812F5A31EF7750A0031B311 /* LaunchScreen.storyboard */,
+				F812F5A61EF7750A0031B311 /* Info.plist */,
+			);
+			path = GLImpower;
+			sourceTree = "<group>";
+		};
+		F812F5AE1EF7750A0031B311 /* GLImpowerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F812F5AF1EF7750A0031B311 /* GLImpowerTests.swift */,
+				F812F5B11EF7750A0031B311 /* Info.plist */,
+			);
+			path = GLImpowerTests;
+			sourceTree = "<group>";
+		};
+		F812F5B91EF7750A0031B311 /* GLImpowerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F812F5BA1EF7750A0031B311 /* GLImpowerUITests.swift */,
+				F812F5BC1EF7750A0031B311 /* Info.plist */,
+			);
+			path = GLImpowerUITests;
+			sourceTree = "<group>";
+		};
+		F812F5C81EF7762F0031B311 /* Impower */ = {
+			isa = PBXGroup;
+			children = (
+				F812F5C91EF776490031B311 /* GLImpower.swift */,
+				F812F5CD1EF7D1CA0031B311 /* GLImpowerAlertUtil.swift */,
+				F8B635E91EFA06DF00DA3D3C /* GLPhotoHelper.swift */,
+			);
+			path = Impower;
+			sourceTree = "<group>";
+		};
+		F8B635EB1EFA086C00DA3D3C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F8B635EC1EFA086C00DA3D3C /* user@2x.png */,
+				F8B635ED1EFA086C00DA3D3C /* user@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F812F5961EF7750A0031B311 /* GLImpower */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F812F5BF1EF7750A0031B311 /* Build configuration list for PBXNativeTarget "GLImpower" */;
+			buildPhases = (
+				F812F5931EF7750A0031B311 /* Sources */,
+				F812F5941EF7750A0031B311 /* Frameworks */,
+				F812F5951EF7750A0031B311 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GLImpower;
+			productName = GLImpower;
+			productReference = F812F5971EF7750A0031B311 /* GLImpower.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F812F5AA1EF7750A0031B311 /* GLImpowerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F812F5C21EF7750A0031B311 /* Build configuration list for PBXNativeTarget "GLImpowerTests" */;
+			buildPhases = (
+				F812F5A71EF7750A0031B311 /* Sources */,
+				F812F5A81EF7750A0031B311 /* Frameworks */,
+				F812F5A91EF7750A0031B311 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F812F5AD1EF7750A0031B311 /* PBXTargetDependency */,
+			);
+			name = GLImpowerTests;
+			productName = GLImpowerTests;
+			productReference = F812F5AB1EF7750A0031B311 /* GLImpowerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F812F5B51EF7750A0031B311 /* GLImpowerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F812F5C51EF7750A0031B311 /* Build configuration list for PBXNativeTarget "GLImpowerUITests" */;
+			buildPhases = (
+				F812F5B21EF7750A0031B311 /* Sources */,
+				F812F5B31EF7750A0031B311 /* Frameworks */,
+				F812F5B41EF7750A0031B311 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F812F5B81EF7750A0031B311 /* PBXTargetDependency */,
+			);
+			name = GLImpowerUITests;
+			productName = GLImpowerUITests;
+			productReference = F812F5B61EF7750A0031B311 /* GLImpowerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F812F58F1EF7750A0031B311 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = GanL;
+				TargetAttributes = {
+					F812F5961EF7750A0031B311 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = U8VP94E9PV;
+						ProvisioningStyle = Automatic;
+					};
+					F812F5AA1EF7750A0031B311 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F812F5961EF7750A0031B311;
+					};
+					F812F5B51EF7750A0031B311 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F812F5961EF7750A0031B311;
+					};
+				};
+			};
+			buildConfigurationList = F812F5921EF7750A0031B311 /* Build configuration list for PBXProject "GLImpower" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F812F58E1EF7750A0031B311;
+			productRefGroup = F812F5981EF7750A0031B311 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F812F5961EF7750A0031B311 /* GLImpower */,
+				F812F5AA1EF7750A0031B311 /* GLImpowerTests */,
+				F812F5B51EF7750A0031B311 /* GLImpowerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F812F5951EF7750A0031B311 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B635EF1EFA086C00DA3D3C /* user@3x.png in Resources */,
+				F812F5A51EF7750A0031B311 /* LaunchScreen.storyboard in Resources */,
+				F812F5A21EF7750A0031B311 /* Assets.xcassets in Resources */,
+				F812F5A01EF7750A0031B311 /* Main.storyboard in Resources */,
+				F8B635EE1EFA086C00DA3D3C /* user@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F812F5A91EF7750A0031B311 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F812F5B41EF7750A0031B311 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F812F5931EF7750A0031B311 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B635EA1EFA06DF00DA3D3C /* GLPhotoHelper.swift in Sources */,
+				F812F5CA1EF776490031B311 /* GLImpower.swift in Sources */,
+				F812F59D1EF7750A0031B311 /* ViewController.swift in Sources */,
+				F812F59B1EF7750A0031B311 /* AppDelegate.swift in Sources */,
+				F812F5CE1EF7D1CA0031B311 /* GLImpowerAlertUtil.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F812F5A71EF7750A0031B311 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F812F5B01EF7750A0031B311 /* GLImpowerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F812F5B21EF7750A0031B311 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F812F5BB1EF7750A0031B311 /* GLImpowerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F812F5AD1EF7750A0031B311 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F812F5961EF7750A0031B311 /* GLImpower */;
+			targetProxy = F812F5AC1EF7750A0031B311 /* PBXContainerItemProxy */;
+		};
+		F812F5B81EF7750A0031B311 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F812F5961EF7750A0031B311 /* GLImpower */;
+			targetProxy = F812F5B71EF7750A0031B311 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F812F59E1EF7750A0031B311 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F812F59F1EF7750A0031B311 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F812F5A31EF7750A0031B311 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F812F5A41EF7750A0031B311 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F812F5BD1EF7750A0031B311 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F812F5BE1EF7750A0031B311 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F812F5C01EF7750A0031B311 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U8VP94E9PV;
+				INFOPLIST_FILE = GLImpower/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hero.GLImpower;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F812F5C11EF7750A0031B311 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U8VP94E9PV;
+				INFOPLIST_FILE = GLImpower/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hero.GLImpower;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F812F5C31EF7750A0031B311 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GLImpowerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hero.GLImpowerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GLImpower.app/GLImpower";
+			};
+			name = Debug;
+		};
+		F812F5C41EF7750A0031B311 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GLImpowerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hero.GLImpowerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GLImpower.app/GLImpower";
+			};
+			name = Release;
+		};
+		F812F5C61EF7750A0031B311 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = GLImpowerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hero.GLImpowerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = GLImpower;
+			};
+			name = Debug;
+		};
+		F812F5C71EF7750A0031B311 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = GLImpowerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hero.GLImpowerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = GLImpower;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F812F5921EF7750A0031B311 /* Build configuration list for PBXProject "GLImpower" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F812F5BD1EF7750A0031B311 /* Debug */,
+				F812F5BE1EF7750A0031B311 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F812F5BF1EF7750A0031B311 /* Build configuration list for PBXNativeTarget "GLImpower" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F812F5C01EF7750A0031B311 /* Debug */,
+				F812F5C11EF7750A0031B311 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F812F5C21EF7750A0031B311 /* Build configuration list for PBXNativeTarget "GLImpowerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F812F5C31EF7750A0031B311 /* Debug */,
+				F812F5C41EF7750A0031B311 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F812F5C51EF7750A0031B311 /* Build configuration list for PBXNativeTarget "GLImpowerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F812F5C61EF7750A0031B311 /* Debug */,
+				F812F5C71EF7750A0031B311 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F812F58F1EF7750A0031B311 /* Project object */;
+}
