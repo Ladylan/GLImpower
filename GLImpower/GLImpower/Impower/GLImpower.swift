@@ -11,7 +11,6 @@ import AVFoundation
 import CoreLocation
 import Photos
 import Contacts
-import AddressBook              //iOS9 弃用
 import EventKit
 import UserNotifications
 
@@ -41,10 +40,14 @@ private var _locationDelegate: LocationDelegate?
 public typealias GLImpowerAction = () -> Void
 
 class GLImpower: NSObject {
-
+    
 }
 
-//MARK: judgeIsNotDetermined
+//MARK: judgeStatus
+
+/**
+ * 根据type判断是否未进行授权处理
+ **/
 public func judgeIsNotDetermined(impowerType: ImpowerType) -> Bool{
     switch impowerType {
     case .photo:
@@ -78,6 +81,9 @@ public func judgeIsNotDetermined(impowerType: ImpowerType) -> Bool{
     }
 }
 
+/**
+ * 根据type判断权限是否拒绝
+ **/
 public func judgeIsDenied(impowerType: ImpowerType) -> Bool{
     switch impowerType {
     case .photo:
@@ -113,15 +119,27 @@ public func judgeIsDenied(impowerType: ImpowerType) -> Bool{
 
 
 //MARK: getImpower
+
+/**
+ * 授权处理
+ * @param type - 授权类型
+ * @param agreed - 授权状态为“同意”时回调
+ * @param agreed - 授权状态为“拒绝”时回调
+ **/
 public func getImpower(_ type: ImpowerType, agreed agreedAction: @escaping GLImpowerAction, rejected rejectedAction: @escaping GLImpowerAction){
     if judgeIsNotDetermined(impowerType: type) {
+        //未授权过，弹出提示框询问是否进行下一步授权操作
         showImpowerAlert(type: type, agreed: agreedAction, rejected: rejectedAction)
     }else{
-        impowerWithType(type: type, agreed: agreedAction, rejected: rejectedAction)
+        //已进行过授权操作，则返回授权状态
+        impowerState(type: type, agreed: agreedAction, rejected: rejectedAction)
     }
 }
 
-public func impowerWithType(type: ImpowerType, agreed: @escaping GLImpowerAction, rejected: @escaping GLImpowerAction){
+/**
+ * 返回授权状态
+ **/
+public func impowerState(type: ImpowerType, agreed: @escaping GLImpowerAction, rejected: @escaping GLImpowerAction){
     switch type {
     case .camera:
         getCameraImpower(agreed: agreed, rejected: rejected)
@@ -298,6 +316,8 @@ private func getNotificationImpower(agreed: @escaping GLImpowerAction, rejected:
 }
 
 //MARK: Notification
+private let askedForNotificationPermissionKey = "Impower.AskedForNotificationPermission"
+
 private extension UIApplication {
     
     enum NotificationAuthorizationStatus {
@@ -310,7 +330,7 @@ private extension UIApplication {
         if UIApplication.shared.currentUserNotificationSettings?.types.isEmpty == false {
             return .authorized
         }
-        let asked = UserDefaults.standard.bool(forKey: "Impower.AskedForNotificationPermission")
+        let asked = UserDefaults.standard.bool(forKey: askedForNotificationPermissionKey)
         return asked ? .denied : .notDetermined
     }
 }
@@ -333,7 +353,7 @@ private class Notification: NSObject {
     @objc private func finishedRequestingNotifications() {
         NotificationCenter.default.removeObserver(self, name: .UIApplicationWillResignActive, object: nil)
         NotificationCenter.default.removeObserver(self, name: .UIApplicationDidBecomeActive, object: nil)
-        UserDefaults.standard.set(true, forKey: "Impower.AskedForNotificationPermission")
+        UserDefaults.standard.set(true, forKey: askedForNotificationPermissionKey)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) { [weak self] in
             self?.finish?()
         }

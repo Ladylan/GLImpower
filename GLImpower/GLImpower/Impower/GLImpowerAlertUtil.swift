@@ -8,11 +8,18 @@
 
 import UIKit
 
+public typealias GLAlertAction = () -> Void
+
 class GLImpowerAlertUtil: NSObject {
 
 }
 
-private func noImpowerAlertTitleWithType(impowerType: ImpowerType) -> String{
+//MARK: AlertTitleString
+
+/**
+ * 无访问权限时的提示框Title
+ **/
+private func noImpowerAlertTitle(impowerType: ImpowerType) -> String{
     var title = ""
     switch impowerType {
     case .photo:
@@ -33,7 +40,10 @@ private func noImpowerAlertTitleWithType(impowerType: ImpowerType) -> String{
     return title
 }
 
-private func didImpowerAlertView(impowerType: ImpowerType) -> String{
+/**
+ * 已获得访问权限时的提示框Title
+ **/
+private func didImpowerAlertTitle(impowerType: ImpowerType) -> String{
     var title = ""
     switch impowerType {
     case .photo:
@@ -54,7 +64,10 @@ private func didImpowerAlertView(impowerType: ImpowerType) -> String{
     return title
 }
 
-public func alertTitleWithType(impowerType: ImpowerType) -> String{
+/**
+ * 询问是否进行下一步授权时的提示框Title
+ **/
+public func askImpowerAlertTitle(impowerType: ImpowerType) -> String{
     var title = ""
     switch impowerType {
     case .photo:
@@ -75,46 +88,57 @@ public func alertTitleWithType(impowerType: ImpowerType) -> String{
     return title
 }
 
+//MARK: ShowAlertView
+
+/**
+ * 授权拒绝提示弹框
+ **/
 public func showRejectAlertView(impowerType: ImpowerType){
-    
-        let title = noImpowerAlertTitleWithType(impowerType: impowerType)
-        
-        let alertController = UIAlertController(title: title,
-                                                message: "", preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-        let okAction = UIAlertAction(title: "确定", style: .default, handler: {
-            action in
-        })
-        alertController.addAction(cancelAction)
-        alertController.addAction(okAction)
-        ((UIApplication.shared.delegate?.window)!)!.rootViewController?.present(alertController, animated: true, completion: nil)
+    showAlertView(title: noImpowerAlertTitle(impowerType: impowerType), cancelStr: "取消", confirmStr: "确定", cancelAction: {
+    }, confirmAction: {
+    })
 }
 
-
+/**
+ * 授权同意提示弹框
+ **/
 public func showDidAgreeImpowerAlertView(impowerType: ImpowerType){
-    let title = didImpowerAlertView(impowerType: impowerType)
+    showAlertView(title: didImpowerAlertTitle(impowerType: impowerType), cancelStr: "取消", confirmStr: "确定", cancelAction: {
+    }, confirmAction: {
+    })
+}
+
+/**
+ * 询问是否进行下一步授权提示弹框
+ **/
+public func showImpowerAlert(type: ImpowerType, agreed: @escaping GLImpowerAction, rejected: @escaping GLImpowerAction){
+    showAlertView(title: askImpowerAlertTitle(impowerType: type), cancelStr: "暂不", confirmStr: "确定", cancelAction: {
+    }, confirmAction: {
+        impowerState(type: type, agreed: agreed, rejected: rejected)
+    })
+}
+
+/**
+ * 弹框样式设定
+ * @param title - 弹框标题
+ * @param cancelStr - 取消按钮文字
+ * @param confirmStr - 确认按钮文字
+ * @param cancelAction - 确认按钮点击回调
+ * @param cancelAction - 取消按钮点击回调
+ **/
+private func showAlertView(title: String, cancelStr: String, confirmStr: String, cancelAction: @escaping GLAlertAction, confirmAction: @escaping GLAlertAction){
     
     let alertController = UIAlertController(title: title,
                                             message: "", preferredStyle: .alert)
-    let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-    let okAction = UIAlertAction(title: "确定", style: .default, handler: {
+    let cancel = UIAlertAction(title: cancelStr, style: .cancel, handler: {
         action in
+        cancelAction()
     })
-    alertController.addAction(cancelAction)
-    alertController.addAction(okAction)
-    ((UIApplication.shared.delegate?.window)!)!.rootViewController?.present(alertController, animated: true, completion: nil)
-}
-
-public func showImpowerAlert(type: ImpowerType, agreed: @escaping GLImpowerAction, rejected: @escaping GLImpowerAction){
-    let title = alertTitleWithType(impowerType: type)
-    let alertController = UIAlertController(title: title,
-                                            message: "", preferredStyle: .alert)
-    let cancelAction = UIAlertAction(title: "暂不", style: .cancel, handler: nil)
-    let okAction = UIAlertAction(title: "确定", style: .default, handler: {
+    let confirm = UIAlertAction(title: confirmStr, style: .default, handler: {
         action in
-        impowerWithType(type: type, agreed: agreed, rejected: rejected)
+        confirmAction()
     })
-    alertController.addAction(cancelAction)
-    alertController.addAction(okAction)
+    alertController.addAction(cancel)
+    alertController.addAction(confirm)
     ((UIApplication.shared.delegate?.window)!)!.rootViewController?.present(alertController, animated: true, completion: nil)
 }
